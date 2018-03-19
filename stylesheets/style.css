@@ -1,0 +1,475 @@
+@import url("whitespace-reset.css");
+
+body {
+  font: normal 16px "Open Sans", sans-serif;
+  color: #363127;
+}
+
+a {
+  color: #363127;
+}
+
+figure img {
+  vertical-align: bottom;
+}
+
+figure {
+  margin: 0;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #007400;
+}
+
+figcaption {
+  height: 151px;
+  padding: 44px 0 56px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+figure {
+  border: 1px solid #f4f3f4;
+}
+
+body nav ul {
+  padding: 15px 0;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 10px solid #f4f3f4;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #f4f3f4;
+  background: #ffffff;
+}
+
+body li {
+  display: inline-block;
+  padding: 0 25px;
+}
+
+body ul a:hover {
+  text-decoration: underline;
+}
+
+body > header {
+  color: #ffffff;
+  text-align: center;
+  margin: 52px auto 0 auto; /*auto adjust left/right margin of header after max-width*/
+  padding: 150px 0 60px 0;
+  background-image: url("../assets/images/front.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 1570px; /*size of front.jpg*/
+  /*background-size: cover can stretch the image beyond its width as viewport size is
+    increased*/
+}
+
+/*
+body > header img:last-child {
+  height: 100%;
+  width: 100%;
+  max-width: 1570px;
+}
+*/
+
+body > header #event_date {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 0 30px;
+}
+
+article {
+  font-weight: 200;
+  padding: 70px 0;
+  margin: 0 auto;
+  border-bottom: 1px solid #f4f3f4;
+}
+
+@media (max-width: 905px) {
+  body li:last-child {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 654px) {
+  body nav ul {
+    display: none;
+  }
+
+  body > header {
+    margin: 0 auto;
+    padding: 90px 0 50px 0;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  body > header #event_date {
+    font-size: 20px;
+  }
+
+
+}
+
+/*
+===========================
+Tickets
+===========================
+*/
+
+
+#tickets {
+  text-align: center;
+}
+
+#tickets a {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #007400;
+}
+
+#tickets a:hover {
+  background: #005500;
+}
+
+/*
+===========================
+Speakers
+===========================
+*/
+
+#speakers li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 16px 16px 0;
+}
+
+#speakers li:nth-child(3n) {
+  padding-right: 0px;
+}
+
+#speakers ul {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1120px;
+}
+
+@media (max-width: 942px) {
+  #speakers li:nth-child(3n) {
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 656px) {
+  #speakers li:nth-child(2n) {
+    padding-right: 0px;
+  }
+
+  #speakers {
+    margin: 0px -30px;
+  }
+}
+
+@media (max-width: 587px) {
+  #speakers li:nth-child(odd) {
+    padding-right: 0;
+  }
+}
+
+/*
+===========================
+Schedule
+===========================
+*/
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 22px;
+  font-weight: 400;
+  max-width: 958px;
+  margin: 0 auto;
+}
+
+td {
+  padding: 14px 0 14px 0;
+  border-top: 1px solid #f4f3f4;
+  border-bottom: 1px solid #f4f3f4;
+}
+
+td a {
+  font-size: 18px;
+  font-weight: 700;
+  color: #047604;
+}
+
+td img {
+  width: 130px;
+}
+
+td:first-child {
+  padding-right: 40px;
+  padding-left: 8px;
+}
+
+td:last-child {
+  padding-right: 8px;
+}
+
+.topic {
+  display: block;
+}
+
+td + td + td {
+  padding-left: 110px;
+}
+
+@media (max-width: 958px) {
+  td + td + td {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 654px) {
+
+  tr {
+    display: block;
+    position: relative;
+  }
+
+  td {
+    display: block;
+  }
+
+  tr td:first-child {
+    border-bottom: none;
+    padding: 20px 8px 20px 0;
+    text-align: right;
+  }
+
+  tr td:nth-child(2) {
+    border: none;
+    padding: 20px 0 20px 0;
+  }
+
+  tr td:last-child {
+    border: none;
+    padding: 20px 0 20px 0;
+  }
+
+  td img {
+    width: 80px;
+  }
+
+  td.photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  table tr:last-child td:last-child {
+    border-bottom: 1px solid #f4f3f4;
+  }
+
+}
+
+
+
+
+
+/*
+===========================
+Call for Papers
+===========================
+*/
+
+#call_for_papers > p {
+  padding-bottom: 20px;
+}
+
+#call_for_papers {
+  max-width: 958px;
+  margin: 0 auto;
+}
+
+#call_for_papers > a {
+  display: inline-block;
+  text-transform: capitalize;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding: 12px 24px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #007400;
+}
+
+#call_for_papers > a:hover {
+  background: #005500;
+}
+
+#call_for_papers p > a {
+  font-weight: bold;
+  color: #007400;
+}
+
+
+
+/*
+===========================
+Sponsors
+===========================
+*/
+
+
+#sponsors {
+  max-width: 910px;
+  margin: 0 auto;
+}
+
+dl,
+dd {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+dt {
+  padding-bottom: 10px;
+}
+
+dd {
+  display: inline;
+}
+
+.gold dd:nth-child(odd){
+  padding-right: 100px;
+}
+
+.support img {
+  height: 148px;
+  width: 180px;
+}
+
+.silver img {
+  width: 230px;
+}
+
+.silver dd {
+  padding-right: 73.33px;
+}
+
+.support dd {
+  padding-right: 47.5px;
+}
+
+
+/*
+===========================
+Footer
+===========================
+*/
+
+footer {
+  height: 340px;
+  background-position: 0 23%;
+  background-image: url("../assets/images/people.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer h2 {
+  padding-top: 40px;
+  color: #fff;
+}
+
+footer div.background {
+  height: 188px;
+  margin-top: -25px;
+  background-color: rgba(0,0,0, 0.75);
+}
+
+footer div.text {
+  color: #fff;
+  font-weight: 300;
+  padding: 16px 0 16px 10px;
+  max-width: 958px;
+  margin: 0 auto;
+}
+
+footer div.text h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+footer div.text p ~ p {
+  margin-top: 22px;
+}
+
+footer div.text p > a {
+  font-weight: bold;
+  color: #007400;
+}
+
+footer div.text p + div a {
+  display: inline-block;
+  margin: 10px 0 20px 0;
+  padding: 10px 26px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #007400;
+}
+
+@media (max-width: 695px) {
+  footer div.background {
+    height: 212px;
+  }
+
+  footer h2 {
+    padding-top: 30px;
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 438px) {
+  footer div.background {
+    height: 235px;
+  }
+
+  footer h2 {
+    padding-top: 30px;
+    font-size: 32px;
+  }
+
+  footer div.text {
+    padding-bottom: 6px;
+  }
+}
